@@ -1,0 +1,17 @@
+<import src="post-item/post-item-template.wxml" />
+<view>
+    <swiper vertical="{{false}}" indicator-dots="true" autoplay='true' interval="2000" indicator-color="#999" indicator-active-color="#fff">
+        <swiper-item>
+            <image src="/images/skv2.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/skv2.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/skv2.jpg"></image>
+        </swiper-item>
+    </swiper>
+    <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx" >
+      <template is="postItem" data="{{item}}" />
+    </block>
+</view>
